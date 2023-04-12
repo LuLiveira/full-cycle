@@ -1,0 +1,30 @@
+Docker
+
+- O que são Containers
+    É um pacote de código + dependencias de um aplicação <- Resposta GENÉRICA
+
+- Como funcionam os Containers
+    Namespaces -> Uma forma de isolar processos
+        Vou ter um processo pai e consequentemente os processos filhos do processo pai
+        Matando o processo principal o Container é destruido
+        Quando falamos de Container estamos falando de processos rodando isolados
+    Cgroups -> Controla os recursos computacionais do Container
+        Isola os recursos computacionais usados pelo processo
+        Dessa forma o processo não impacta os outros recursos computacionais usados pela maquina
+    FileSystem -> se tratando de Docker usamos o OFS (Overlay File System)
+        Responsavel por trabalhar por camadas (layers)
+
+- Como o Docker funciona
+    Solução que integra os 3 pilares dos Containers (Namespaces, Cgroups, FileSystem)
+
+- Principais comandos do Docker
+
+- Dockerfile
+    Dockerfile gera um build
+    Quando o build é gerado uma nova imagem é gerada
+
+- Imagens Docker
+    Um grupo de camadas (layers)
+    Imagens sao imutaveis
+    Imagens tem a camada de Leitura/Escrita para possibilitar alteração
+    As Imagens ficam dentro de um imagem registry
